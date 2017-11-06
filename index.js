@@ -21,7 +21,7 @@ Shape.prototype.move = function(x, y) {
 }
 
 function Circle(r) {
-  Shape.call(this);
+  //Shape.call(this); // ?
 
   this.radius = r;
 }
@@ -46,6 +46,8 @@ function Side(length) {
 }
 
 function Polygon(Sides) {
+  //Shape.call(this); // ??
+  
   this.sides = Sides;
 }
 
@@ -65,3 +67,10 @@ Polygon.prototype.perimeter = function() {
 Polygon.prototype.numberOfSides = function() {
   return this.sides.length;
 }
+
+function Quadrilateral([side1, side2, side3, side4]) {
+  Polygon.call(this, [side1, side2, side3, side4]); // <-- !!
+}
+
+Quadrilateral.prototype = Object.create(Polygon.prototype);
+Quadrilateral.prototype.constructor = Polygon;
