@@ -51,10 +51,14 @@ function Polygon(Sides) {
 
 Polygon.prototype.perimeter = function() {
   var perimeter = 0;
-  
+
   for (side in this.sides) {
     perimeter += side;
   }
 
   return perimeter;
+}
+
+Polygon.prototype.numberOfSides() {
+  return this.sides.length;
 }
