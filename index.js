@@ -22,12 +22,16 @@ Shape.prototype.move = function(x, y) {
 
 function Circle(r) {
   Shape.call(this);
-  
+
   this.radius = r;
 }
 
 Circle.prototype.area = function() {
   return this.r * this.r * Math.Pi;
+}
+
+Circle.prototype.circumference = function() {
+  return 2 * this.r * Math.Pi;
 }
 
 Circle.prototype = Object.create(Shape.prototype);
