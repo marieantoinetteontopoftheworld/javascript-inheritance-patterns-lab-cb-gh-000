@@ -62,6 +62,6 @@ Polygon.prototype.perimeter = function() {
   return perimeter;
 }
 
-Polygon.prototype.numberOfSides() {
+Polygon.prototype.numberOfSides = function() {
   return this.sides.length;
 }
