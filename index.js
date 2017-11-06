@@ -27,7 +27,7 @@ function Circle(r) {
 }
 
 Circle.prototype = Object.create(Shape.prototype);
-Circle.prototype.constructor = Circle();
+Circle.prototype.constructor = Circle;
 
 Circle.prototype.area = function() {
   return this.r * this.r * Math.PI;
