@@ -42,7 +42,7 @@ Circle.prototype.circumference = function() {
 }
 
 function Side(length) {
-  this.l = length;
+  this.length = length;
 }
 
 function Polygon(Sides) {
@@ -61,7 +61,7 @@ Polygon.prototype.perimeter = function() {
   var perimeter = 0;
 
   for (var i = 0; i < this.sides.length; i++) {
-    perimeter += this.sides[i].l;
+    perimeter += this.sides[i].length;
   }
 
   return perimeter;
