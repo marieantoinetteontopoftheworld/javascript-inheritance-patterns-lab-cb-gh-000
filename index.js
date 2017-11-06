@@ -107,7 +107,7 @@ Square.protoype.listProperties = function() {
   var props = '';
   for (var prop in this) {
     if (this.hasOwnProperty(prop)) {
-      props += 'this.' + prop + ' = ' + this[prop] + '\n';
+      props += 'this.' + prop + ' = ' + this[prop] + '\n' ;
     }
   }
 
