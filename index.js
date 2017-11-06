@@ -29,6 +29,10 @@ function Circle(r) {
 Circle.prototype = Object.create(Shape.prototype);
 Circle.prototype.constructor = Circle;
 
+Circle.prototype.diameter = function() {
+  return(this.radius*2);
+}
+
 Circle.prototype.area = function() {
   return this.r * this.r * Math.PI;
 }
