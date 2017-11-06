@@ -45,13 +45,10 @@ function Side(length) {
   this.length = length;
 }
 
-function Polygon(Sides) {
+function Polygon(sides) {
   //Shape.call(this); // ??
 
-  this.sides = [];
-  for (var i = 0; i < Sides.length; i++) {
-    this.sides[i] = new Side(Sides[i]);
-  }
+  this.sides = sides;
 }
 
 Polygon.prototype = Object.create(Shape.prototype);
@@ -71,8 +68,8 @@ Polygon.prototype.numberOfSides = function() {
   return this.sides.length;
 }
 
-function Quadrilateral(side1, side2, side3, side4) {
-  Polygon.call(this, [side1, side2, side3, side4]); // <-- !!
+function Quadrilateral(side1L, side2L, side3L, side4L) {
+  Polygon.call(this, [new Side(side1), new Side(side2L), new Side(side3L), new Side(side4L)]); // <-- !!
 }
 
 Quadrilateral.prototype = Object.create(Polygon.prototype);
