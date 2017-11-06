@@ -48,7 +48,10 @@ function Side(length) {
 function Polygon(Sides) {
   //Shape.call(this); // ??
 
-  this.sides = Sides;
+  this.sides = [];
+  for (var i = 0; i < Sides.length; i++) {
+    this.sides[i] = new Side(Sides[i]);
+  }
 }
 
 Polygon.prototype = Object.create(Shape.prototype);
