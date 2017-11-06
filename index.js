@@ -4,35 +4,34 @@ function Point(x, y) {
 }
 
 Point.prototype.toString = function() {
-  return '(' + this.x + ', ' + this.y + ')'
+  return("(" + this.x + "," + this.y + ")");
 }
 
-function Shape() {
-  //this.position = '';
+function Side(length) {
+  this.length = length;
 }
+
+function Shape() {}
 
 Shape.prototype.addToPlane = function(x, y) {
-  this.position = new Point(x, y);
+  this.position = new Point(x,y);
+}
+Shape.prototype.move = function(x,y) {
+  this.position = new Point(x,y);
 }
 
-Shape.prototype.move = function(x, y) {
-  this.position.x = x;
-  this.position.y = y;
-}
-
-function Circle(r) {
+function Circle(radius) {
   Shape.call(this);
-
-  this.radius = r;
+  this.radius = radius;
 }
-
 Circle.prototype = Object.create(Shape.prototype);
-Circle.prototype.constructor = Circle();
-
-Circle.prototype.area = function() {
-  return this.r * this.r * Math.PI;
+Circle.prototype.constructor = Circle;
+Circle.prototype.diameter = function() {
+  return(this.radius*2);
 }
-
+Circle.prototype.area = function() {
+  return(Math.PI * this.radius^2);
+}
 Circle.prototype.circumference = function() {
-  return 2 * this.r * Math.PI;
+  return(2 * Math.PI * this.radius);
 }
