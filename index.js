@@ -58,7 +58,7 @@ Polygon.prototype.perimeter = function() {
   var perimeter = 0;
 
   for (var i = 0; i < this.sides.length; i++) {
-    perimeter += parseInt(this.sides[i]);
+    perimeter += this.sides.length;
   }
 
   return perimeter;
