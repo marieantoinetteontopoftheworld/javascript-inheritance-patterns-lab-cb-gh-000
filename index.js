@@ -83,7 +83,7 @@ Triangle.prototype = Object.create(Polygon.prototype);
 Triangle.prototype.constructor = Polygon;
 
 function Rectangle(width, height) {
-  Quadrilateral.call(this, [new Side(width), new Side(width), new Side(height), new Side(height)]); // <-- !!
+  Quadrilateral.call(this, [width, width, height, height]); // <-- !!
   this.width = width;
   this.height = height;
 }
