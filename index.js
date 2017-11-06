@@ -94,10 +94,3 @@ Rectangle.prototype.constructor = Rectangle;
 Rectangle.prototype.area = function() {
   return this.width * this.height;
 }
-
-function Square(side) {
-  Rectangle.call(this, side, side);
-}
-
-Square.prototype = Object.create(Rectangle.prototype);
-Square.prototype.constructor = Square;
