@@ -46,7 +46,7 @@ function Side(length) {
 }
 
 function Polygon(Sides) {
-  Shape.call(this); // ??
+  //Shape.call(this); // ??
 
   this.sides = Sides;
 }
@@ -58,7 +58,7 @@ Polygon.prototype.perimeter = function() {
   var perimeter = 0;
 
   for (var i = 0; i < this.sides.length; i++) {
-    perimeter += this.sides[i];
+    perimeter += parseInt(this.sides[i]);
   }
 
   return perimeter;
