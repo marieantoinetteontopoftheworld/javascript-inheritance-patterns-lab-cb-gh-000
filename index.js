@@ -106,7 +106,7 @@ Square.protoype.listProperties = function() {
   var str = '';
   for (prop in Square) {
     if (hasOwnProperty(prop)) {
-      str += prop + ' – '
+      str += prop + ' - '
     }
   }
 
