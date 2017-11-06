@@ -49,6 +49,9 @@ function Polygon(Sides) {
   this.sides = Sides;
 }
 
+Polygon.prototype = Object.create(Shape.prototype);
+Polygon.prototype.constructor = Polygon;
+
 Polygon.prototype.perimeter = function() {
   var perimeter = 0;
 
