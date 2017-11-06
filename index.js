@@ -57,8 +57,8 @@ Polygon.prototype.constructor = Polygon;
 Polygon.prototype.perimeter = function() {
   var perimeter = 0;
 
-  for (side in this.sides) {
-    perimeter += side;
+  for (var i = 0; i < this.sides; i++) {
+    perimeter += this.sides[i];
   }
 
   return perimeter;
@@ -68,7 +68,7 @@ Polygon.prototype.numberOfSides = function() {
   return this.sides.length;
 }
 
-function Quadrilateral([side1, side2, side3, side4]) {
+function Quadrilateral([side1, side2, side3, side4]) { 
   Polygon.call(this, [side1, side2, side3, side4]); // <-- !!
 }
 
