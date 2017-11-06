@@ -30,7 +30,7 @@ Circle.prototype = Object.create(Shape.prototype);
 Circle.prototype.constructor = Circle;
 
 Circle.prototype.diameter = function() {
-  return(this.radius *2 );
+  return(this.radius * 2);
 }
 
 Circle.prototype.area = function() {
@@ -42,7 +42,7 @@ Circle.prototype.circumference = function() {
 }
 
 function Side(length) {
-  this.length = length;
+  this.l = length;
 }
 
 function Polygon(Sides) {
@@ -61,7 +61,7 @@ Polygon.prototype.perimeter = function() {
   var perimeter = 0;
 
   for (var i = 0; i < this.sides.length; i++) {
-    perimeter += this.sides[i].length;
+    perimeter += this.sides[i].l;
   }
 
   return perimeter;
