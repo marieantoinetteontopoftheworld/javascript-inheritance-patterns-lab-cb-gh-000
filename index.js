@@ -95,20 +95,20 @@ Rectangle.prototype.area = function() {
   return this.width * this.height;
 }
 
-function Square(side) {
-  Rectangle.call(this, side, side);
+function Square(length) {
+  Rectangle.call(this, length, length)
+  this.length = length;
 }
 
 Square.prototype = Object.create(Rectangle.prototype);
-Square.prototype.constructor = Square;
+Square.prototype.constructor = Square
 
-Square.protoype.listProperties = function() {
-  var props = '';
+Square.prototype.listProperties = function() {
+  var props = "";
   for (var prop in this) {
-    if (this.hasOwnProperty(prop)) {
-      props += 'this.' + prop + ' = ' + this[prop] + '\n';
+    if(this.hasOwnProperty(prop)) {
+      props += "this." + prop + " = " + this[prop] + "\n";
     }
   }
-
-  return props;
+  return(props);
 }
