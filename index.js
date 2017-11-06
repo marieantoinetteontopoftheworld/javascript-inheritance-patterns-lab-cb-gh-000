@@ -26,13 +26,13 @@ function Circle(r) {
   this.radius = r;
 }
 
+Circle.prototype = Object.create(Shape.prototype);
+Circle.prototype.constructor = Circle();
+
 Circle.prototype.area = function() {
-  return this.r * this.r * Math.Pi;
+  return this.r * this.r * Math.PI;
 }
 
 Circle.prototype.circumference = function() {
-  return 2 * this.r * Math.Pi;
+  return 2 * this.r * Math.PI;
 }
-
-Circle.prototype = Object.create(Shape.prototype);
-Circle.prototype.constructor = Circle();
