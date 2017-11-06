@@ -57,7 +57,7 @@ Polygon.prototype.constructor = Polygon;
 Polygon.prototype.perimeter = function() {
   var perimeter = 0;
 
-  for (var i = 0; i < this.sides; i++) {
+  for (var i = 0; i < this.sides.length; i++) {
     perimeter += this.sides[i];
   }
 
