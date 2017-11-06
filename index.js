@@ -46,7 +46,7 @@ function Side(length) {
 }
 
 function Polygon(Sides) {
-  //Shape.call(this); // ??
+  Shape.call(this); // ??
 
   this.sides = Sides;
 }
