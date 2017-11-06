@@ -40,3 +40,21 @@ Circle.prototype.area = function() {
 Circle.prototype.circumference = function() {
   return 2 * this.radius * Math.PI;
 }
+
+function Side(length) {
+  this.length = length;
+}
+
+function Polygon(Sides) {
+  this.sides = Sides;
+}
+
+Polygon.prototype.perimeter = function() {
+  var perimeter = 0;
+  
+  for (side in this.sides) {
+    perimeter += side;
+  }
+
+  return perimeter;
+}
